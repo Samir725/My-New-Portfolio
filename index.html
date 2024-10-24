@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <!-- Nav content here -->
+    <header>
+        <nav>
+            <div id="navBar" class="flex justify-between items-center px-3 py-1 shadow-md bg-white">
+                <div id="logo" class="max-w-12 max-h-12 cursor-pointer">
+                    <img src="image/logo1.jpg" class="rounded-full">
+                </div>
+    
+                <div id="nav-menu" class="hidden md:flex justify-between gap-10 px-5">
+                    <a href="#navBar" class="hover:bg-slate-200 rounded-md p-1 px-2">Home</a>
+                    <a href="#aboutMe" class="hover:bg-slate-200 rounded-md p-1 px-2">About</a>
+                    <a href="#hero2" class="hover:bg-slate-200 rounded-md p-1 px-2">Skills</a>
+                    <a href="#projects" class="hover:bg-slate-200 rounded-md p-1 px-2">Projects</a>
+                    <a href="#footer" class="hover:bg-slate-200 rounded-md p-1 px-2">Contact</a>
+                </div>
+    
+                <div id="bar" class="md:hidden" onclick="handleMenu()">
+                    <i class="fa-solid fa-bars cursor-pointer text-xl pr-2"></i>
+                </div>
+            </div>
+    
+            <div id="barMenu" class="hidden absolute top-0 right-0 left-0 duration-800 bg-white">
+                <div id="logoToggle" class="flex justify-between items-center shadow-none px-3 py-1">
+                    <div id="logo" class="max-w-12 max-h-12 cursor-pointer">
+                        <img src="image/logo1.jpg" class="rounded-full">
+                    </div>
+    
+                    <div id="bar" class="md:hidden" onclick="handleMenu()">
+                        <i class="fa-solid fa-xmark cursor-pointer text-xl pr-2"></i></i>
+                    </div>
+                </div>
+    
+                <div id="barMenuContent" class="animate-fadeUp duration-300 shadow-md pb-1">
+                    <a href="#navBar" class="block m-3 px-3 hover:bg-slate-200 rounded-md p-1">Home</a>
+                    <a href="#aboutMe" class="block m-3 px-3 hover:bg-slate-200 rounded-md p-1">About</a>
+                    <a href="#hero2" class="block m-3 px-3 hover:bg-slate-200 rounded-md p-1">Skills</a>
+                    <a href="#projects" class="block m-3 px-3 hover:bg-slate-200 rounded-md p-1">Projects</a>
+                    <a href="#footer" class="block m-3 px-3 hover:bg-slate-200 rounded-md p-1">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Nav content ends here -->
+
+    <main>
+        <div id="hero1" class="min-h-screen bg-gradient-to-br from-purple-50 via-orange-50 to-transparent">
+            <div id="aboutMe">
+                <div id="image" class="flex justify-center pt-10 h-60">
+                    <img src="image/logo2.jpg" alt="front image" class="rounded-full">
+                </div>
+    
+                <div id="bio">
+                    <h1 class="flex justify-center p-4 font-bold text-3xl">Hi, I'm Samir Panjiyar!</h1>
+                    <p class="mb-6 text-sm pr-5 pl-5">I'm a passionate and motivated web developer just starting my journey in the tech world. 
+                        I enjoy learning new technologies and building projects that challenge my skills. My focus is on creating clean, responsive websites using HTML, CSS, and JavaScript. 
+                        Currently, I'am expanding my knowledge in front-end frameworks like React and diving into back-end development.
+                    </p>
+                    <p class="mb-6 text-sm pr-5 pl-5">I'm always excited to take on new challenges and contribute to meaningful projects. Let'm build something great together!</p>
+                </div>
+            </div>
+            
+            <div id="hero2">
+                <h1 class="flex justify-center font-bold text-2xl pt-4">Skills</h1>
+                <div id="language" class="flex justify-center gap-4 p-4 flex-wrap">
+                    <div class="bg-red-600 w-36 flex justify-center p-1.5 rounded-md">HTML</div>
+                    <div class="bg-blue-500 w-36 flex justify-center p-1.5 rounded-md">CSS</div>
+                    <div class="bg-yellow-400 w-36 flex justify-center p-1.5 rounded-md">JavaScript</div>
+                    <div class="bg-green-600 w-36 flex justify-center p-1.5 rounded-md">Tailwind-CSS</div>
+                    <div class="bg-blue-400 w-36 flex justify-center p-1.5 rounded-md">React</div>
+                    <div class="bg-purple-600 w-36 flex justify-center p-1.5 rounded-md">PHP</div>
+                </div>
+            </div>
+
+            <div id="hero3" class="p-2">
+                <h1 class="flex justify-center font-bold text-2xl pb-2 pt-4 md:pb-6">Projects</h1>
+                <div id="projects" class="flex flex-col gap-3 sm:flex flex-wrap justify-evenly">
+                    <div id="project1" class="h-auto m-3 bg-white rounded-lg shadow-md hover:shadow-2xl duration-300 sm:w-96">
+                        <img src="image/EasyRoom.png" alt="Room for rental finder" class="h-40 w-full rounded-lg shadow-md">
+                        <div id="projectContent">
+                            <h2 class="text-lg font-semibold p-4">Room for rental finder</h2>
+                            <p class="text-sm px-4">A full-stack Room for rental finder with real-time inventory management.</p>
+                            <div id="languageList" class="flex p-4 gap-2">
+                                <p class="text-sm bg-red-600 px-4 py-0.5 rounded-full">Html</p>
+                                <p class="text-sm bg-blue-500 px-4 py-0.5 rounded-full">CSS</p>
+                                <p class="text-sm bg-yellow-400 px-4 py-0.5 rounded-full">JavaScript</p>
+                                <p class="text-sm bg-purple-600 px-4 py-0.5 rounded-full">PHP</p>
+                            </div>
+                            <div id="demoButton" class="px-4 pb-6">
+                                <a href="https://easyroomsamir.netlify.app/" target="_blank"><button class="text-sm  bg-yellow-600 px-3 py-1 rounded-md mr-2">View Demo</button></a>
+                                <a href="https://github.com/Samir725/Easy-Room-Website" target="_blank"><button class="text-sm bg-yellow-600 px-3 py-1 rounded-md"><i class="fa-brands fa-github"></i> GitHub</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="project2" class="h-auto m-3 bg-white rounded-lg shadow-md hover:shadow-2xl duration-300 sm:w-96">
+                        <img src="image/New Portfolio.png" alt="My New Portfolio" class="h-40 w-full rounded-lg shadow-md">
+                        <div id="projectContent">
+                            <h2 class="text-lg font-semibold p-4">My New Portfolio</h2>
+                            <p class="text-sm px-4">My new Portfolio responsive websites using HTML, CSS, and JavaScript.</p>
+                            <div id="languageList" class="flex p-4 gap-2">
+                                <p class="text-sm bg-red-600 px-4 py-0.5 rounded-full">Html</p>
+                                <p class="text-sm bg-blue-500 px-4 py-0.5 rounded-full">CSS</p>
+                                <p class="text-sm bg-yellow-400 px-4 py-0.5 rounded-full">JavaScript</p>
+                            </div>
+                            <div id="demoButton" class="px-4 pb-6">
+                                <a href="https://samirpanjiyar.netlify.app/" target="_blank"><button class="text-sm  bg-yellow-600 px-3 py-1 rounded-md mr-2">View Demo</button></a>
+                                <a href="https://github.com/Samir725/My-New-Portfolio" target="_blank"><button class="text-sm bg-yellow-600 px-3 py-1 rounded-md"><i class="fa-brands fa-github"></i> GitHub</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="project3" class="h-auto m-3 bg-white rounded-lg shadow-md hover:shadow-2xl duration-300 sm:w-96">
+                        <img src="image/Old Portfolio.png" alt="My Old Portfolio" class="h-40 w-full rounded-lg shadow-md">
+                        <div id="projectContent">
+                            <h2 class="text-lg font-semibold p-4">My Old Portfolio</h2>
+                            <p class="text-sm px-4">My new Portfolio responsive websites using HTML, CSS, and JavaScript.</p>
+                            <div id="languageList" class="flex p-4 gap-2">
+                                <p class="text-sm bg-red-600 px-4 py-0.5 rounded-full">Html</p>
+                                <p class="text-sm bg-green-600 px-4 py-0.5 rounded-full">Tailwind-CSS</p>
+                                <p class="text-sm bg-yellow-400 px-4 py-0.5 rounded-full">JavaScript</p>
+                            </div>
+                            <div id="demoButton" class="px-4 pb-6">
+                                <a href="https://samirpanjiyar725.netlify.app/" target="_blank"><button class="text-sm bg-yellow-600 px-3 py-1 rounded-md mr-2">View Demo</button></a>
+                                <a href="https://github.com/Samir725/Portfolio" target="_blank"><button class="text-sm bg-yellow-600 px-3 py-1 rounded-md"><i class="fa-brands fa-github"></i> GitHub</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="hero4">
+                <h1 class="flex justify-center p-4 font-bold text-2xl">Get in Touch</h1>
+                <div id="contactForm" class="md:flex justify-center">
+                    <form action="" method="post" class="p-4 md:w-5/12">
+                        <input type="text" name="name" id="name" placeholder="Your Name" required class="w-full p-2 rounded-lg text-sm mb-4">
+                        <input type="email" name="email" id="email" placeholder="Your Email" required class="w-full p-2 rounded-lg text-sm mb-4">
+                        <textarea name="message" id="message" placeholder="Your Message" class="w-full p-2 rounded-lg text-sm h-40 mb-4"></textarea>
+                        <button type="submit" class="bg-yellow-600 w-full p-3 rounded-lg text-sm mb-7"><i class="fa-regular fa-paper-plane pr-2"></i> Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="footer">
+            <div id="footerContent" class="bg-gray-800 h-auto text-gray-400 p-5 pt-10">
+                <a href="mailto:sameerpanjiyar725@gmail.com"><p class="text-sm pb-2.5 inline-block"><i class="fa-regular fa-envelope pr-2"></i> Email: samerpanjiyar725@gmail.com</p></a>
+                <p class="text-sm pb-2.5"><i class="fa-solid fa-phone pr-2"></i> Phone: +977 9746593171</p>
+                <a href="https://github.com/Samir725" target="_blank"><P class="text-sm pb-2.5 inline-block"><i class="fa-brands fa-github pr-2"></i> GitHub: Samir725</P></a>
+            </div>
+    
+            <div id="socialIcon" class="bg-gray-800 px-4 pb-6 border-b border-gray-600 text-gray-400 flex justify-center gap-5 text-3xl">
+                <a href="mailto:sameerpanjiyar725@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+                <a href="https://www.facebook.com/panjiyar.sameer.725" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/samirpanjiyar725/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/Samir725" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+    
+            <div id="copyright" class="bg-gray-900 text-gray-400 flex justify-center text-xs p-4">
+                <p><i class="fa-regular fa-copyright pr-1"></i> 2024 Samir Panjiyar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
